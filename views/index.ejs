@@ -1,17 +1,100 @@
+
+
 <% include ./partials/header %>
+<style>
+body{
+ background-color: black;
+ color: white;
+ text-align: center;
+ /*background: #B7004E ;*/
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}#hearts{
+ width: 60px;
+ height: 60px;
+}button{
+ color: red;
+}.corgi-banner{
+ display: inline-block;
+ margin-right: auto;
+ margin-right: auto;
+ max-width: 400px;
+ max-height: 400px;
+ margin: 20px;
+}/*@keyframes sway {
+ 0% { transform: rotateZ(-15deg) rotateX(55deg);  }
+ 30% { transform: rotateZ(20deg) rotateX(60deg); animation-timing-function: ease-in-out; }
+ 60% { transform: rotateZ(-20deg) rotateX(55deg); animation-timing-function: ease-in-out;  }
+ 100% { transform: rotateZ(0deg) rotateX(58deg); animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.435);  }
+}@keyframes fall {
+ 60% { -webkit-filter: drop-shadow(0px 60px 40px rgba(0,0,0,0)); }
+ 100% { margin-top: 500px;
+   -webkit-filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6)); }
+}div#fall-container {
+ height: 800px;
+ overflow: hidden;
+ position: relative;
+ perspective-origin: center;
+ perspective: 1800px;
+}.img_heart {
+ position: absolute;
+ width: 30px;
+ transform-origin: 0px -400px 0px;
+ animation-name: fall, sway;
+ animation-duration: 5s, 5s;
+ animation-fill-mode: both;
+ animation-timing-function: linear, ease-in-out;
+}#leaf2 { top: 40px; left: 50%; animation-delay: 0s; transform: rotateX(58deg); }
+#leaf3 { width: 40px; top: -122px; left: 22%; animation-delay: 1.2s; }
+#leaf4 { width: 40px; top: -45px; left: 38%; animation-delay: 2.4s; }
+#leaf5 { width: 40px; top: -68px; left: 70%; animation-delay: 3.25s; }
+#leaf6 { width: 40px; top: -135px; left: 22%; animation-delay: 1.8s; }
+#leaf7 { width: 40px; top: -55px; left: 38%; animation-delay: 2.9s; }
+#leaf8 { width: 40px; top: -18px; left: 70%; animation-delay: 3.55s; }
 
-  <section class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 main-corgi">
-      <h2>Do you like <span class="dog-name"><%= name %></span>?</h2>
-      <img class="corgi-banner img-responsive" src="<%= url %>" alt= "">
-      <button id="paw-left">Paw Left</button>
-      <button id="paw-right">Paw Right</button>
-    </div>
-  </section>
 
-  <section>
-    <h3>Dogs You've Liked</h3>
-    <ul><!-- LIKED DOG NAMES/PICS CAN GO HERE --></ul>
-  </section>
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+ <section class="row">
+   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 main-corgi">
+     <img src="http://images.clipartpanda.com/heart-clip-art-valentine_heart_29-1969px.png" id="hearts">
+     <h2>Do you like <%= name %>?</h2>
+     <img src= "<%= url %>" alt="" class="corgi-banner img-responsive"><br>
+     <p>
+     <button id="paw-left">Paw Left</button>
+     <button id="paw-right">Paw Right</button>
+     </p>
+   </div>
+ </section>
+
+ <section>
+   <h3>Number of Dogs You've Liked</h3>
+   <ul><li class="likeddogs"><!-- LIKED DOG NAMES/PICS CAN GO HERE --></li></ul>
+ </section>
+
+ <section>
+   <h3>You're stupid if you have a number here</h3>
+   <ul><li class="disliked"></li></ul>
+ </section>
+
+<!-- </div> -->
 
 <% include ./partials/footer %>

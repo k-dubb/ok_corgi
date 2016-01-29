@@ -19,6 +19,9 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'OKC', name: dog.name, url: dog.url});
   })
 
+
+
+
 });
 
 module.exports = router;

@@ -1,8 +1,16 @@
-
-
 $(function() {
+  var savedDogs = localStorage.getItem('likedDogs') || '0';
+  var dislikedDogs = localStorage.getItem('disliked') || '0';
+  $('.likeddogs').html(savedDogs);
+  $('.disliked').html(dislikedDogs);
+  var name = $('.dog-name');
+  var dogpic = $('.dog-pic').text();
 
   $('#paw-left').on('click', function(){
+    dislikedDogs++;
+    localStorage.setItem('disliked', dislikedDogs)
+
+    window.location.reload();
 
 
 
@@ -10,12 +18,16 @@ $(function() {
 
   $('#paw-right').on('click', function(){
 
-    var name = $('.dog-name');
-    console.log(name.text());
-    var dogpic = $('.dog-pic')
-    console.log(dogpic.text());
 
-  })
+    console.log(name.text());
+    console.log(dogpic);
+    $(".likeddogs").html(name);
+    savedDogs++;
+    localStorage.setItem('likedDogs', savedDogs);
+
+    window.location.reload();
+
+  });
 
 
 
