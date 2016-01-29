@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Dog = require('../models/dog')
+var jquery = require('jquery');
 
 function randomDog(dogsArray){
   var dogs = dogsArray;
@@ -10,11 +11,12 @@ function randomDog(dogsArray){
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  Dog.find({}, 'dog', function(err,data){
+  Dog.find({}, 'name url', function(err,data){
     if (err) console.log(err);
 
     var dog = randomDog(data);
-    res.render('index', { title: 'OKC', name: dog.name });
+
+    res.render('index', { title: 'OKC', name: dog.name, url: dog.url});
   })
 
 });
