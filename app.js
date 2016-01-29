@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.DB_CORGI);
+mongoose.connect(process.env.DB_CONN_CORGI);
 
 app.use('/', routes);
 
