@@ -14,10 +14,9 @@ router.get('/', function(req, res, next) {
     if (err) console.log(err);
 
     var dog = randomDog(data);
+    res.render('index', { title: 'OKC', name: dog.name });
   })
 
-
-  res.render('index', { title: 'OKC', dog: dog.dog });
 });
 
 module.exports = router;
